@@ -1,0 +1,37 @@
+﻿@page
+@using CompanyT.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<div class="wrapper">
+    @*шапка *@
+    
+        <div id="compname" class="">Companies</div>
+        <div class="pull-right">
+            <input type="submit"  value="+" asp-page-handler="Add" form="wrapform"/>
+            <input type="submit" value="&#128465" asp-page-handler="Delete" form="wrapform" />
+        </div>
+
+    <form method="post" id="wrapform">
+        @*заголовок таблицы*@
+        <input type="text" class="theader" placeholder="Company" required asp-for="newCompany.Name"/>
+        <input type="text" class="theader" placeholder="City" required asp-for="newCompany.City" />
+        <input type="text" class="theader" placeholder="State" required asp-for="newCompany.State" />
+        <input type="tel" class="theader" placeholder="Phone" required asp-for="newCompany.Phone" />
+    </form>
+
+    @{
+        foreach (Company c in Model.Сompanies)
+        {
+            <div class="ctable"><a asp-page="CompanyDetails" asp-route-id="@c.Id">@c.Name</a> </div>
+            <div class="ctable">@c.City</div>
+            <div class="ctable">@c.State</div>
+            <div class="ctable">@c.Phone.ToString()</div>
+        }
+    }
+
+</div>

@@ -1,0 +1,82 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div {
+    padding-left: 5px;
+}
+
+.pull-right {
+    text-align: right;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid black;
+}
+
+#wrapform {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#compname {
+    grid-column-start: 1;
+    grid-column-end: 4; 
+}
+
+.theader {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.ctable {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-top: 4px;
+}
+
+.details-wrapper {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+#emploee {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+}
